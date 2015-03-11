@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<launch>
-
-<param name="robot_description" textfile="$(find smart5six_description)/robot/comau_moveit.urdf"/>
-
-</launch>
