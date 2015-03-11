@@ -1,0 +1,382 @@
+<?xml version="1.0"?>
+<robot name="comau_smart5_six" xmlns:xacro="http://ros.org/wiki/xacro">
+
+
+  <!-- **************** WORLD LINK ********************** -->
+  <link name="world" />
+
+  <!-- **************** BASE COMAU ********************** -->
+  <link name="base_comau">
+  	<visual>
+	  <origin xyz="0 0 0" rpy="0 0 0" />
+  	  <geometry>
+  		<mesh
+			filename="package://smart5six_description/meshes/dae/base.dae"
+			scale="0.001 0.001 0.001"
+  			/>
+  	  </geometry>
+	  
+  	  <material name="dark_grey">
+  		<color rgba="0.76 0.76 0.76 1" />
+  	  </material>
+  	</visual>
+
+	<inertial>
+	  <origin xyz="-0.10060 0.00262 0.08516" rpy="0 0 0" />
+	  <mass value="125.01405"/>
+	  <inertia
+		  ixx="0.81984" ixy="-0.08140" ixz="-0.08589"
+		  iyy="2.56616" iyz="0.00694"
+		  izz="2.84953"/>
+	</inertial>
+
+	<collision>
+	  <origin xyz="0 0 0" rpy="0 0 0" />
+	  <geometry>
+  		<mesh
+			filename="package://smart5six_description/meshes/dae/base.dae"
+			scale="0.001 0.001 0.001"
+  			/>
+	  </geometry>
+	</collision>
+  </link>
+  
+  <!-- **************** AXIS 1 ********************** -->
+  <link name="axes_1">
+	<visual>
+	  <geometry>
+		<mesh
+ 			filename="package://smart5six_description/meshes/dae/axes_1.dae"
+			scale="0.001 0.001 0.001"
+			/>
+	  </geometry>
+	  
+	  <material name="cyan">
+		<color rgba="0 1 1 1"/>
+	  </material>
+	</visual>
+
+	<inertial>
+	  <origin xyz="0.03242 0.01778 0.12409" rpy="0 0 0" />
+	<mass value="61.340186"/>
+	  <inertia
+		  ixx="7.439629" ixy="1.308878" ixz="-0.207593"
+		  iyy="1.34393" iyz="0.801292"
+		  izz="7.58969" />
+	</inertial>
+
+	<collision>
+	  <origin xyz="0 0 0" rpy="0 0 0" />
+	  <geometry>
+  		<mesh
+			filename="package://smart5six_description/meshes/dae/axes_1.dae"
+			scale="0.001 0.001 0.001"
+  			/>
+	  </geometry>
+	</collision>
+  </link>
+
+  <!-- **************** AXIS 2 ********************** -->
+  <link name="axes_2">
+	<visual>
+	  
+	  <geometry>
+		<mesh 
+			filename="package://smart5six_description/meshes/dae/axes_2.dae"
+			scale="0.001 0.001 0.001"
+			/>
+	  </geometry>
+	  
+	  <material name="dark_grey" />
+	</visual>
+
+	<inertial>
+	  <origin xyz="-0.00776 0.01741 0.18315" rpy="0 0 0" />
+	  <mass value="27.961877"/>
+	  <inertia
+		  ixx="0.647025" ixy="0.072866" ixz="0.849004"
+		  iyy="2.614907" iyz="-0.047671"
+		  izz="2.081713" />
+	</inertial>
+
+	<collision>
+	  <origin xyz="0 0 0" rpy="0 0 0" />
+	  <geometry>
+  		<mesh 
+			filename="package://smart5six_description/meshes/dae/axes_2.dae"
+			scale="0.001 0.001 0.001"
+  			/>
+	  </geometry>
+	</collision>
+  </link>
+
+  <!-- **************** AXIS 3 ********************** -->
+  <link name="axes_3">
+	<visual>
+	  <geometry>
+		<mesh 
+			filename="package://smart5six_description/meshes/dae/axes_3.dae"
+			scale="0.001 0.001 0.001"
+			/>
+	  </geometry>
+	  
+	  <material name="cyan" />
+	</visual>
+
+	<inertial>
+	  <origin xyz="-0.02847 -0.02463 0.09430" rpy="0 0 0" />
+	  <mass value="20.628123"/>
+	  <inertia
+		  ixx="0.237192" ixy="-0.008851" ixz="0.063039"
+		  iyy="0.287495" iyz="-0.002462"
+		  izz="0.37129" />
+	</inertial>
+
+	<collision>
+	  <origin xyz="0 0 0" rpy="0 0 0" />
+	  <geometry>
+  		<mesh
+			filename="package://smart5six_description/meshes/dae/axes_3.dae"
+			scale="0.001 0.001 0.001"
+  			/>
+	  </geometry>
+	</collision>
+  </link>
+
+  <!-- **************** AXIS 4 ********************** -->
+  <link name="axes_4">
+	<visual>	  
+	  <geometry>
+		<mesh 
+			filename="package://smart5six_description/meshes/dae/axes_4.dae"
+			scale="0.001 0.001 0.001"
+			/>
+	  </geometry>
+	  
+	  <material name="dark_grey" />
+	</visual>
+
+	<inertial>
+	  <origin xyz="0.26341 -0.00244 -0.00002" rpy="0 0 0" />
+	  <mass value="19.701023"/>
+	  <inertia
+		  ixx="1.53526" ixy="0.000725" ixz="-0.005893"
+		  iyy="0.087447" iyz="0.00579"
+		  izz="1.561065" />
+	</inertial>
+
+	<collision>
+	  <origin xyz="0 0 0" rpy="0 0 0" />
+	  <geometry>
+  		<mesh
+			filename="package://smart5six_description/meshes/dae/axes_4.dae"
+			scale="0.001 0.001 0.001"
+  			/>
+	  </geometry>
+	</collision>
+  </link>
+
+  <!-- **************** AXIS 5 ********************** -->
+  <link name="axes_5">
+	<visual>	  
+	  <geometry>
+		<mesh
+ 			filename="package://smart5six_description/meshes/dae/axes_5.dae"
+			scale="0.001 0.001 0.001"
+			/>
+	  </geometry>
+	  
+	  <material name="cyan" />
+	</visual>
+
+	<inertial>
+	  <origin xyz="0.02065 0.00074 -0.00007" rpy="0 0 0" />
+	  <mass value="2.020671"/>
+	  <inertia
+		  ixx="0.003867" ixy="0.000004" ixz="0.000714"
+		  iyy="0.003656" iyz="-0.000006"
+		  izz="0.003066" />
+	</inertial>
+
+	<collision>
+	  <origin xyz="0 0 0" rpy="0 0 0" />
+	  <geometry>
+  		<mesh			
+			filename="package://smart5six_description/meshes/dae/axes_5.dae"
+			scale="0.001 0.001 0.001"
+  			/>
+	  </geometry>
+	</collision>
+  </link>
+
+  <!-- **************** AXIS 6 ********************** -->
+  <link name="axes_6">
+	<visual>	  
+	  <geometry>
+		<mesh 
+			filename="package://smart5six_description/meshes/dae/axes_6.dae"
+			scale="0.001 0.001 0.001"
+			/>
+	  </geometry>
+	  
+	  <material name="orange">
+		<color rgba="1 0.64 0.0 1"/>
+	  </material>
+	</visual>
+
+	<inertial>
+	  <origin xyz="-0.00746 -0.00003 -0.00067" rpy="0 0 0" />
+	  <mass value="0.241159"/>
+	  <inertia
+		  ixx="0.001911" ixy="0.000000" ixz="-0.000007"
+		  iyy="0.001905" iyz="0.000001"
+		  izz="0.000118" />
+	</inertial>
+
+	<collision>
+	  <origin xyz="0 0 0" rpy="0 0 0" />
+	  <geometry>
+  		<mesh
+			filename="package://smart5six_description/meshes/dae/axes_6.dae"
+			scale="0.001 0.001 0.001"
+  			/>
+	  </geometry>
+	</collision>
+  </link>
+
+
+  <!-- ********************* JOINTS *********************** -->  
+
+  <joint name="world_joint"  type="fixed">
+  	<origin xyz="0 0 0" rpy="0 0 0" />
+	<parent link="world"/>
+	<child link="base_comau"/>
+  </joint>
+
+  <joint name="joint_1" type="revolute">
+  	<parent link="base_comau" />
+  	<child link="axes_1" />
+	<origin xyz="0 0 0.20140" rpy="0 0 0"/>
+	<axis xyz="0 0 -1" />
+	<!-- *********** EFFORT TO MAP CORRECTLY *************** -->
+	<limit lower="-2.967" upper="2.967" effort="12" velocity="2.443"/>
+  </joint>
+
+  <joint name="joint_2" type="revolute">
+  	<parent link="axes_1" />
+  	<child link="axes_2" />
+	<origin xyz="0.150 -0.090 0.2486" rpy="0 0 0"/>
+	<axis xyz="0 1 0"/>
+	<!-- *********** EFFORT TO MAP CORRECTLY *************** -->
+	<limit lower="-1.48" upper="2.71" effort="12" velocity="2.792"/>
+  </joint>
+
+  <joint name="joint_3" type="revolute">
+  	<parent link="axes_2" />
+  	<child link="axes_3" />
+	<origin xyz="0 0.107 0.590" rpy="0 -1.57 0"/>
+	<axis xyz="0 -1 0"/>
+	<!-- *********** EFFORT TO MAP CORRECTLY *************** -->
+	<limit lower="-2.967" upper="0.00" effort="12" velocity="2.967"/>
+  </joint>
+
+  <joint name="joint_4" type="revolute">
+  	<parent link="axes_3" />
+  	<child link="axes_4" />
+	<origin xyz="0.100 -0.017 0.130" rpy="0 0 0"/>
+	<axis xyz="-1 0 0"/>
+	<!-- *********** EFFORT TO MAP CORRECTLY *************** -->
+	<limit lower="-3.67" upper="3.67" effort="12" velocity="7.854"/>
+  </joint>
+
+  <joint name="joint_5" type="revolute">
+  	<parent link="axes_4" />
+  	<child link="axes_5" />
+	<origin xyz="0.54707 0.0 0.0" rpy="0 0 0"/>
+	<axis xyz="0 1 0"/>
+	<!-- *********** EFFORT TO MAP CORRECTLY *************** -->
+	<limit lower="-2.27" upper="2.27" effort="12" velocity="6.545"/>
+  </joint>
+
+  <joint name="joint_6" type="revolute">
+  	<parent link="axes_5" />
+  	<child link="axes_6" />
+	<origin xyz="0.095 0.0 0.0" rpy="0 0 0"/>
+	<axis xyz="-1 0 0"/>
+	<!-- *********** EFFORT TO MAP CORRECTLY *************** -->
+	<limit lower="-47.12" upper="47.12" effort="12" velocity="9.6"/>
+  </joint>
+
+<!-- ***GAZEBO*** -->
+<gazebo>
+  <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+
+  </plugin>
+</gazebo>
+
+<gazebo>
+<plugin name="smart5six_gazebo_plugin" filename="libcomau_gazebo_plugin.so">
+<ns>comau</ns>
+<robotSimType>comau/Smart-5_Six</robotSimType>
+</plugin>
+</gazebo>
+<gazebo reference="base_link">
+<material>Gazebo/FlatBlack</material>
+</gazebo>
+
+<transmission name="joint_1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_1">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint_1_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="joint_2_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_2">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint_2_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="joint_3_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_3">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint_3_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="joint_4_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_4">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint_4_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="joint_5_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_5">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint_5_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="joint_6_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_6">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint_6_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+</robot>
