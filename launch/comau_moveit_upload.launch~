@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+
+<param name="robot_description" textfile="$(find comau_model)/robot/comau_moveit.urdf"/>
+
+</launch>
